@@ -4,15 +4,32 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta charset="utf-8">
     <title>Fitness Calculator</title>
-    <link rel="stylesheet" href="fitness_calc.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+    <link rel="stylesheet" href="fitness_calc.css">
+    <script src="https://kit.fontawesome.com/1d0d69ddce.js" crossorigin="anonymous"></script>
 </head>
 
-<body>
+<body class="p-3">
 
-    
-
-
+    <header class="container-fluid bg-white py-2 px-4">
+        <nav class="navbar navbar-expand">
+            <h2>Fitness Calculator</h2>
+            <button class="bg-transparent border-0 ms-2" id="darkModeToggler">
+                <i class="fa-solid fa-circle-half-stroke"></i>
+            </button>
+            <ul class="navbar-nav ms-auto">
+                <li class="nav-item active">
+                    <a class="nav-link active" href="#" aria-current="page">BFP</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link disabled" href="#">Ideal Weight</a>
+                </li>
+                <li class="nav-item border-end-0">
+                    <a class="nav-link disabled" href="#">DCR</a>
+                </li>
+            </ul>
+        </nav>   
+    </header>
 
     <script src="fitness_calc.js" type="text/JavaScript"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.5/dist/umd/popper.min.js" integrity="sha384-Xe+8cL9oJa6tN/veChSP7q+mnSPaj5Bcu9mPX5F5xIGE0DVittaqT5lorf0EI7Vk" crossorigin="anonymous"></script>
