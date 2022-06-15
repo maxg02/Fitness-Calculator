@@ -43,10 +43,12 @@ section {
 }
 
 #btn-male.active {
+    pointer-events: none;
     color: #384B9D !important;
 }
 
 #btn-female.active {
+    pointer-events: none;
     color: #8F0B94 !important;
 }
 
@@ -98,8 +100,7 @@ section {
     border-radius: 15px;
     visibility: visible;
     position: absolute;
-    left: 0%;
-    transform: translateX(-24px);
+    left: -4%;
     top: 60px;
 }
 

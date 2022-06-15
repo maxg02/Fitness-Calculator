@@ -41,17 +41,17 @@
                     <div class="d-flex flex-column">
                         <img src="imgs/bodies/man.png" alt="" id="body">
                         <div class="mt-4 d-flex justify-content-between px-2">
-                            <button class="bg-transparent border-0 ms-2 text-muted" id="btn-male">
+                            <button class="bg-transparent border-0 ms-2 text-muted active" id="btn-male">
                                 <i class="fa-solid fa-mars"></i>
                             </button>
-                            <button class="bg-transparent border-0 ms-2 text-muted active" id="btn-female">
+                            <button class="bg-transparent border-0 ms-2 text-muted" id="btn-female">
                                 <i class="fa-solid fa-venus"></i>
                             </button>
                         </div>
                     </div>
                 </div>
                 <div class="col-auto d-flex flex-column align-items-center">
-                    <div class="row" id="inputs-div">
+                    <div class="row flex-grow-1" id="inputs-div">
                         <div class="text-center">
                             <h1 class="m-0">BFP Calculator</h1>
                             <hr class="w-100 m-1"/>
@@ -106,9 +106,9 @@
                                     </div>
                                 </div>
                                 <div class="col-12 d-flex flex-column justify-content-center">
-                                    <div class="text-center mb-5 position-relative">
-                                        <label class="form-label" for="weight-input">Weight</label>
-                                        <input class="form-range" type="range" id="weight-input" min="40" max="160">
+                                    <div class="text-center mb-5 position-relative w-100">
+                                        <label class="form-label" for="weight-input">Weight</label><br/>
+                                        <input class="form-range" type="range" id="weight-input" min="40" max="160" value="100">
                                         <span id="weight-indicator">100kg</span>
                                     </div>
                                 </div>
