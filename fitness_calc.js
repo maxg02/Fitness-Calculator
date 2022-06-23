@@ -18,19 +18,32 @@ let gender = 'male'
 const maleBtn = document.getElementById('btn-male')
 const femaleBtn = document.getElementById('btn-female')
 const body = document.getElementById('body')
+const toggler = document.getElementById('img-toggler')
 
 maleBtn.onclick = ()=>{
     maleBtn.classList.toggle('active')
     femaleBtn.classList.toggle('active')
-    body.src = 'imgs/bodies/male.png'
-    gender = 'male'
+    
+    toggler.classList.toggle('deployed')
+    setTimeout(() => {
+        body.src = 'imgs/bodies/male.png'
+        gender = 'male'
+        toggler.classList.toggle('deployed')
+    }, 300)
+       
 }
 
 femaleBtn.onclick = ()=>{
     femaleBtn.classList.toggle('active')
     maleBtn.classList.toggle('active')
-    body.src = 'imgs/bodies/female.png'
-    gender = 'female'
+
+    toggler.classList.toggle('deployed')
+    setTimeout(() => {
+        body.src = 'imgs/bodies/female.png'
+        gender = 'female'
+        toggler.classList.toggle('deployed')
+    }, 300)
+    
 }
 
 //get data

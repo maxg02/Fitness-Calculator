@@ -35,6 +35,21 @@ section {
 }
 
 #body {
+    height: 374px;
+    margin-bottom: 6px;
+}
+
+#img-toggler{
+    width: 100%;
+    border-top: 3px solid rgb(180, 180, 180);
+    position: absolute;
+    height: 0px;
+    background-color: white;
+    transition: 0.3s ease-out;
+}
+
+#img-toggler.deployed{
+    transition: 0.3s ease-out;
     height: 380px;
 }
 
