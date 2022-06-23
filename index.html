@@ -39,12 +39,12 @@
             <div class="container-fluid d-flex justify-content-evenly w-75">
                 <div class="col-auto d-flex justify-content-center p-0 align-items-stretch">
                     <div class="d-flex flex-column">
-                        <img src="imgs/bodies/man.png" alt="" id="body">
+                        <img src="imgs/bodies/male.png" alt="male" id="body">
                         <div class="mt-4 d-flex justify-content-between px-2">
-                            <button class="bg-transparent border-0 ms-2 text-muted active" id="btn-male">
+                            <button class="bg-transparent border-0 text-muted active" id="btn-male">
                                 <i class="fa-solid fa-mars"></i>
                             </button>
-                            <button class="bg-transparent border-0 ms-2 text-muted" id="btn-female">
+                            <button class="bg-transparent border-0 text-muted" id="btn-female">
                                 <i class="fa-solid fa-venus"></i>
                             </button>
                         </div>
@@ -91,8 +91,8 @@
                                     <div class="w-75 mx-auto">
                                         <label class="form-label" for="age-input">Age</label>
                                         <div class="input-group flex-nowrap">
-                                            <input class="form-control text-center" type="number" id="age-input" aria-describedby="age-cm" min="40" max="130">
-                                            <span class="input-group-text" id="age-cm">cm</span>
+                                            <input class="form-control text-center" type="number" id="age-input" aria-describedby="age-years" min="1" max="80">
+                                            <span class="input-group-text" id="age-years">years</span>
                                         </div>
                                     </div>
                                 </div>
@@ -109,7 +109,7 @@
                                     <div class="text-center mb-5 position-relative w-100">
                                         <label class="form-label" for="weight-input">Weight</label><br/>
                                         <input class="form-range" type="range" id="weight-input" min="40" max="160" value="100">
-                                        <span id="weight-indicator">100kg</span>
+                                        <span id="weight-indicator"></span>
                                     </div>
                                 </div>
                             </div>
@@ -119,12 +119,27 @@
                         </button>
                     </div>
                 </div>
+
             </div>
         </div>
     </div>
 
-    <script src="fitness_calc.js" type="text/JavaScript"></script>
+    <div class="modal fade" tabindex="-1" id="results-modal">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title"></h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+
+                </div>
+            </div>
+        </div>
+    </div>
+
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.5/dist/umd/popper.min.js" integrity="sha384-Xe+8cL9oJa6tN/veChSP7q+mnSPaj5Bcu9mPX5F5xIGE0DVittaqT5lorf0EI7Vk" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.min.js" integrity="sha384-kjU+l4N0Yf4ZOJErLsIcvOU2qSb74wXpOhqTvwVx3OElZRweTnQ6d31fXEoRD1Jy" crossorigin="anonymous"></script>
+    <script src="fitness_calc.js" type="text/JavaScript"></script>
 </body>
 </html>
