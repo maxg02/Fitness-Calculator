@@ -65,7 +65,7 @@ btnCalc.onclick = ()=>{
     const options = {
         method: 'GET',
         headers: {
-            'X-RapidAPI-Key': '764b7dd13bmsh5052cb02cc32d39p133d57jsne66582f5752e',
+            'X-RapidAPI-Key': apiKey,
 		    'X-RapidAPI-Host': 'fitness-calculator.p.rapidapi.com'
         }
     }
@@ -140,6 +140,9 @@ function showResults(data){
             break
         case 'Athletes':
             category = "primary"
+            break
+        case 'Essential Fat':
+            category = "info"
             break
     }
 
