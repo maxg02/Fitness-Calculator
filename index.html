@@ -13,8 +13,8 @@
 
 <body class="p-3">
     <div class="container-fluid d-flex flex-column h-100">
-        <div class="row">
-            <header class="container-fluid bg-white py-2 px-4">
+        <div class="row mx-0">
+            <header class="container-fluid bg-white py-2 px-4 rounded-pill">
                 <nav class="navbar navbar-expand">
                     <h2 class="ms-2">Fitness Calculator</h2>
                     <button class="bg-transparent border-0 ms-2" id="darkModeToggler">
@@ -34,90 +34,101 @@
                 </nav>   
             </header>
         </div>
-        <div class="row mt-3 flex-grow-1 bg-white rounded-5 py-5 d-flex justify-content-center gx-5 mx-0">
-            <div class="col-auto d-flex align-items-stretch">
-                <div class="d-flex flex-column">
-                    <div class="position-relative d-flex align-items-end">
-                        <div id="img-toggler"></div>
-                        <img src="imgs/bodies/male.png" alt="male" id="body">
-                    </div>
-                    <div class="mt-4 d-flex justify-content-between px-2">
-                        <button class="bg-transparent border-0 text-muted active" id="btn-male">
-                            <i class="fa-solid fa-mars"></i>
-                        </button>
-                        <button class="bg-transparent border-0 text-muted" id="btn-female">
-                            <i class="fa-solid fa-venus"></i>
-                        </button>
-                    </div>
-                </div>
-            </div>
-            <div class="col-auto d-flex flex-column">
-                <div class="row flex-grow-1" id="inputs-div">
-                    <div class="text-center">
+        <div class="container-fluid flex-grow-1 mt-3 bg-white rounded-5 mx-0">
+            <div class="container">
+                <div class="row py-5 d-flex justify-content-center mx-0">
+                    <div class="text-center d-block d-xl-none mb-4 w-75">
                         <h1 class="m-0">BFP Calculator</h1>
-                        <hr class="w-100 m-1"/>
+                        <hr class="w-100 my-1"/>
                         <p class="text-muted">Body Fat Percentage</p>
                     </div>
-                    <form class="mt-1 w-100" id="range-form">
-                        <div class="row d-flex justify-content-center">
-                            <div class="text-center mb-3 col-4">
-                                <div class="w-75 mx-auto">
-                                    <label class="form-label" for="neck-input">Neck</label>
-                                    <div class="input-group flex-nowrap">
-                                        <input class="form-control text-center" type="number" id="neck-input" aria-describedby="neck-cm" min="20" max="80">
-                                        <span class="input-group-text" id="neck-cm">cm</span>
-                                    </div>
-                                </div>
+                    <div class="d-xl-none col-12"></div>
+                    <div class="col-auto d-flex align-items-stretch">
+                        <div class="d-flex flex-column">
+                            <div class="position-relative d-flex flex-grow-1">
+                                <div id="img-toggler" class="w-100 border-top border-3 position-absolute bg-white align-self-end"></div>
+                                <img src="imgs/bodies/male.png" alt="male" id="body" class="img-fluid">
                             </div>
-                            <div class="text-center mb-3 col-4">
-                                <div class="w-75 mx-auto">
-                                    <label class="form-label" for="waist-input">Waist</label>
-                                    <div class="input-group flex-nowrap">
-                                        <input class="form-control text-center" type="number" id="waist-input" aria-describedby="waist-cm" min="40" max="130">
-                                        <span class="input-group-text" id="waist-cm">cm</span>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="text-center mb-3 col-4">
-                                <div class="w-75 mx-auto">
-                                    <label class="form-label" for="hip-input">Hip</label>
-                                    <div class="input-group flex-nowrap">
-                                        <input class="form-control text-center" type="number" id="hip-input" aria-describedby="hip-cm" min="40" max="130">
-                                        <span class="input-group-text" id="hip-cm">cm</span>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="text-center mb-3 col-4">
-                                <div class="w-75 mx-auto">
-                                    <label class="form-label" for="age-input">Age</label>
-                                    <div class="input-group flex-nowrap">
-                                        <input class="form-control text-center" type="number" id="age-input" aria-describedby="age-years" min="1" max="80">
-                                        <span class="input-group-text" id="age-years">years</span>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="text-center mb-3 col-4">
-                                <div class="w-75 mx-auto">
-                                    <label class="form-label" for="height-input">height</label>
-                                    <div class="input-group flex-nowrap">
-                                        <input class="form-control text-center" type="number" id="height-input" aria-describedby="height-cm" min="130" max="230">
-                                        <span class="input-group-text" id="height-cm">cm</span>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-12 d-flex flex-column justify-content-center">
-                                <div class="text-center mb-5 position-relative w-100">
-                                    <label class="form-label" for="weight-input">Weight</label><br/>
-                                    <input class="form-range" type="range" id="weight-input" min="40" max="160" value="100">
-                                    <span id="weight-indicator"></span>
-                                </div>
+                            <div class="mt-4 d-flex justify-content-between px-2">
+                                <button class="bg-transparent border-0 text-muted active" id="btn-male">
+                                    <i class="fa-solid fa-mars"></i>
+                                </button>
+                                <button class="bg-transparent border-0 text-muted" id="btn-female">
+                                    <i class="fa-solid fa-venus"></i>
+                                </button>
                             </div>
                         </div>
-                    </form>
-                    <button id="btn-calc" class="btn w-50 py-2 rounded-5 text-white mt-auto mx-auto">
-                        Calculate
-                    </button>
+                    </div>
+                    <div class="col-11 col-xl-7 d-flex flex-column offset-xl-1 mt-4 mt-xl-0">
+                        <div class="row flex-grow-1 mx-0 d-flex">
+                            <div class="text-center d-none d-xl-block">
+                                <h1 class="m-0">BFP Calculator</h1>
+                                <hr class="w-100 my-1"/>
+                                <p class="text-muted">Body Fat Percentage</p>
+                            </div>
+                            <form class="mt-1 w-100 mx-0">
+                                <div class="row d-flex justify-content-center w-100 mx-0">
+                                    <div class="text-center mb-3 col-12 col-sm-6 col-md-4">
+                                        <div class="w-75 mx-auto">
+                                            <label class="form-label" for="neck-input">Neck</label>
+                                            <div class="input-group flex-nowrap">
+                                                <input class="form-control text-center" type="number" id="neck-input" aria-describedby="neck-cm" min="20" max="80">
+                                                <span class="input-group-text" id="neck-cm">cm</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="text-center mb-3 col-12 col-sm-6 col-md-4">
+                                        <div class="w-75 mx-auto">
+                                            <label class="form-label" for="waist-input">Waist</label>
+                                            <div class="input-group flex-nowrap">
+                                                <input class="form-control text-center" type="number" id="waist-input" aria-describedby="waist-cm" min="40" max="130">
+                                                <span class="input-group-text" id="waist-cm">cm</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="text-center mb-3 col-12 col-sm-6 col-md-4">
+                                        <div class="w-75 mx-auto">
+                                            <label class="form-label" for="hip-input">Hip</label>
+                                            <div class="input-group flex-nowrap">
+                                                <input class="form-control text-center" type="number" id="hip-input" aria-describedby="hip-cm" min="40" max="130">
+                                                <span class="input-group-text" id="hip-cm">cm</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="text-center mb-3 col-12 col-sm-6 col-md-4">
+                                        <div class="w-75 mx-auto">
+                                            <label class="form-label" for="age-input">Age</label>
+                                            <div class="input-group flex-nowrap">
+                                                <input class="form-control text-center" type="number" id="age-input" aria-describedby="age-years" min="1" max="80">
+                                                <span class="input-group-text" id="age-years">years</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="text-center mb-3 col-12 col-sm-6 col-md-4">
+                                        <div class="w-75 mx-auto">
+                                            <label class="form-label" for="height-input">Height</label>
+                                            <div class="input-group flex-nowrap">
+                                                <input class="form-control text-center" type="number" id="height-input" aria-describedby="height-cm" min="130" max="230">
+                                                <span class="input-group-text" id="height-cm">cm</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-12 d-flex flex-column justify-content-center">
+                                        <div class="text-center mb-5 position-relative w-100">
+                                            <label class="form-label" for="weight-input">Weight</label><br/>
+                                            <input class="form-range" type="range" id="weight-input" min="40" max="160" value="100">
+                                            <span id="weight-indicator" class="position-absolute text-white rounded-pill"></span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </form>
+                            <button id="btn-calc" class="btn w-50 py-2 rounded-5 text-white mt-auto mx-auto">
+                                Calculate
+                            </button>
+                        </div>
+                    </div>
                 </div>
+                
             </div>
         </div>
     </div>
