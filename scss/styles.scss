@@ -1,2 +1,146 @@
-@import "../node_modules/bootstrap/scss/bootstrap.scss";
 
+$main-blue: #384B9D;
+$main-purple: #8F0B94;
+
+$font-family-base: 'Source Sans Pro', sans-serif;
+
+$utilities: () !default;
+$utilities: map-merge((
+    "width": (
+      property: width,
+      class: w,
+      values: (
+        0: 0px,
+        25: 25%,
+        50: 50%,
+        70: 70%,
+        75: 75%,
+        100: 100%,
+        auto: auto
+      )
+    ),
+    "height": (
+      property: height,
+      class: h,
+      values: (
+        0: 0px,
+        25: 25%,
+        50: 50%,
+        75: 75%,
+        100: 100%,
+        auto: auto
+      )
+    ),
+), $utilities);
+
+@import "../node_modules/bootstrap/scss/bootstrap";
+
+@mixin gradient ($direction: to bottom) {
+    background-image: linear-gradient($direction, $main-blue, $main-purple);
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    @include gradient()
+}
+
+#darkModeToggler {
+    font-size: 22px;
+}
+
+#body {
+    height: 374px;
+}
+
+.navbar-nav {
+    border: 1px solid rgb(202, 202, 202);
+    border-radius: 20px;
+}
+
+.navbar-nav li{
+    border-right: 1px solid rgb(202, 202, 202);
+}
+
+.navbar-nav li:nth-child(1) a{
+    padding-right: 10px !important;
+}
+
+#body {
+    height: 374px;
+}
+
+#img-toggler{
+    border-top: {
+        color: var(--bs-gray-400);
+    }
+    height: 0px;
+    transition: 0.3s ease-out;
+}
+
+#img-toggler.deployed{
+    transition: 0.3s ease-out;
+    height: 385px;
+}
+
+#btn-male, #btn-female {
+    font-size: 40px;
+}
+
+#btn-male.active {
+    pointer-events: none;
+    color: $main-blue !important;
+}
+
+#btn-female.active {
+    pointer-events: none;
+    color: $main-purple !important;
+}
+
+#btn-male:not(.active):hover {
+    color: $main-blue !important;
+    animation: rotate-btn 1s ease-in-out infinite;
+}
+
+#btn-female:not(.active):hover {
+    color: $main-purple !important;
+    animation: rotate-btn 1s ease-in-out infinite;
+}
+
+@keyframes rotate-btn {
+    
+    0% {
+        transform: rotate(10deg);
+    }
+    
+    50% {
+        transform: rotate(-10deg);
+    }
+    
+    100% {
+        transform: rotate(10deg);
+    }
+}
+
+#btn-calc {
+    font-size: 22px;
+    font-weight: 600;
+    @include gradient(to right)
+}
+
+.form-label {
+    font-family: Fira Mono, monospace;
+    font-size: 15px;
+}
+
+#weight-indicator {
+    background-color: $main-blue;
+    height: 1.5em;
+    width: 4em;
+    left: -4%;
+    top: 60px;
+}
