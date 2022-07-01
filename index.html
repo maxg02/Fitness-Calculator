@@ -16,25 +16,29 @@
         <div class="row mx-0 mb-3">
             <header class="container-fluid bg-white py-2 px-4">
                 <nav class="navbar navbar-expand-sm">
-                    <h2 class="ms-2 my-0">Fitness Calculator</h2>
-                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#main-navbar" aria-controls="main-navbar" aria-expanded="false" aria-label="Toggle navigation">
-                        <span class="navbar-toggler-icon"></span>
-                    </button>
-                    <div class="collapse navbar-collapse" id="main-navbar">
-                        <button class="bg-transparent border-0 ms-2" id="darkModeToggler">
-                            <i class="fa-solid fa-circle-half-stroke"></i>
+                    <div class="container-fluid px-0 d-flex flex-column flex-xs-row align-items-stretch align-items-xs-center">
+                        <div class="d-flex justify-content-center">
+                            <h2 class="ms-xs-2 my-0">Fitness Calculator</h2>
+                            <button class="bg-transparent border-0 ms-2" id="darkModeToggler">
+                                <i class="fa-solid fa-circle-half-stroke"></i>
+                            </button>
+                        </div>
+                        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#main-navbar" aria-controls="main-navbar" aria-expanded="false" aria-label="Toggle navigation">
+                            <span class="navbar-toggler-icon"></span>
                         </button>
-                        <ul class="navbar-nav ms-auto border rounded-pill overflow-hidden">
-                            <li class="nav-item active border-end">
-                                <a class="nav-link active" href="#" aria-current="page">BFP</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link disabled" href="#">Ideal Weight</a>
-                            </li>
-                            <li class="nav-item border-start">
-                                <a class="nav-link disabled" href="#">DCR</a>
-                            </li>
-                        </ul>
+                        <div class="collapse navbar-collapse mt-2 mt-sm-0" id="main-navbar">
+                            <ul class="navbar-nav ms-auto border rounded-pill overflow-hidden">
+                                <li class="nav-item border-end text-center">
+                                    <a class="nav-link active" href="#" aria-current="page">BFP</a>
+                                </li>
+                                <li class="nav-item text-center">
+                                    <a class="nav-link" href="#">Ideal Weight</a>
+                                </li>
+                                <li class="nav-item border-start text-center">
+                                    <a class="nav-link" href="#">DCR</a>
+                                </li>
+                            </ul>
+                        </div>
                     </div>
                 </nav>   
             </header>

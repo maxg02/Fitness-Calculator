@@ -3,10 +3,28 @@ $main-blue: #384B9D;
 $main-purple: #8F0B94;
 
 //Default overwriting
+
+$grid-breakpoints: (
+  xss: 0,
+  xs: 380px,
+  sm: 576px,
+  md: 768px,
+  lg: 992px,
+  xl: 1200px,
+  xxl: 1400px
+);
+
+$container-max-widths: (
+  sm: 540px,
+  md: 720px,
+  lg: 960px,
+  xl: 1140px,
+  xxl: 1320px
+);
+
 $font-family-base: 'Source Sans Pro', sans-serif;
 
 $navbar-light-active-color: white;
-
 
 //Utilities
 $utilities: () !default;
@@ -55,14 +73,23 @@ body {
 }
 
 header {
-    border-radius: 50px;
+    border-radius: 35px;
+
+    @include media-breakpoint-down(xs) {
+        h2 {
+            font-size: 22px;
+        }
+        #darkModeToggler {
+            font-size: 20px;
+        }
+    }
 }
 
 #darkModeToggler {
     font-size: 22px;
 }
 
-.nav-item.active {
+.nav-link.active {
     @include gradient(to right);
 }
 
