@@ -3644,12 +3644,12 @@ textarea.form-control-lg {
   --bs-navbar-color: rgba(0, 0, 0, 0.55);
   --bs-navbar-hover-color: rgba(0, 0, 0, 0.7);
   --bs-navbar-disabled-color: rgba(0, 0, 0, 0.3);
-  --bs-navbar-active-color: rgba(0, 0, 0, 0.9);
+  --bs-navbar-active-color: white;
   --bs-navbar-brand-padding-y: 0.3125rem;
   --bs-navbar-brand-margin-end: 1rem;
   --bs-navbar-brand-font-size: 1.25rem;
-  --bs-navbar-brand-color: rgba(0, 0, 0, 0.9);
-  --bs-navbar-brand-hover-color: rgba(0, 0, 0, 0.9);
+  --bs-navbar-brand-color: white;
+  --bs-navbar-brand-hover-color: white;
   --bs-navbar-nav-link-padding-x: 0.5rem;
   --bs-navbar-toggler-padding-y: 0.25rem;
   --bs-navbar-toggler-padding-x: 0.75rem;
@@ -10752,25 +10752,20 @@ body {
   background-image: linear-gradient(to bottom, #384B9D, #8F0B94);
 }
 
+header {
+  border-radius: 50px;
+}
+
 #darkModeToggler {
   font-size: 22px;
 }
 
+.nav-item.active {
+  background-image: linear-gradient(to right, #384B9D, #8F0B94);
+}
+
 #body {
   height: 374px;
-}
-
-.navbar-nav {
-  border: 1px solid rgb(202, 202, 202);
-  border-radius: 20px;
-}
-
-.navbar-nav li {
-  border-right: 1px solid rgb(202, 202, 202);
-}
-
-.navbar-nav li:nth-child(1) a {
-  padding-right: 10px !important;
 }
 
 #img-toggler {
@@ -10784,25 +10779,25 @@ body {
   height: 385px;
 }
 
-#btn-male, #btn-female {
+#btn-male {
   font-size: 40px;
 }
-
 #btn-male.active {
-  pointer-events: none;
   color: #384B9D !important;
-}
-
-#btn-female.active {
   pointer-events: none;
-  color: #8F0B94 !important;
 }
-
 #btn-male:not(.active):hover {
   color: #384B9D !important;
   animation: rotate-btn 1s ease-in-out infinite;
 }
 
+#btn-female {
+  font-size: 40px;
+}
+#btn-female.active {
+  color: #8F0B94 !important;
+  pointer-events: none;
+}
 #btn-female:not(.active):hover {
   color: #8F0B94 !important;
   animation: rotate-btn 1s ease-in-out infinite;

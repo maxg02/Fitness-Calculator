@@ -1,9 +1,14 @@
-
+//Variables
 $main-blue: #384B9D;
 $main-purple: #8F0B94;
 
+//Default overwriting
 $font-family-base: 'Source Sans Pro', sans-serif;
 
+$navbar-light-active-color: white;
+
+
+//Utilities
 $utilities: () !default;
 $utilities: map-merge((
     "width": (
@@ -41,6 +46,18 @@ $utilities: map-merge((
     background-image: linear-gradient($direction, $main-blue, $main-purple);
 }
 
+@mixin gender-btn ($color) {
+    font-size: 40px;
+    &.active{
+        color: $color !important;
+        pointer-events: none;
+    }
+    &:not(.active):hover{
+        color: $color !important;
+        animation: rotate-btn 1s ease-in-out infinite;
+    }
+}
+
 * {
     padding: 0;
     margin: 0;
@@ -48,28 +65,23 @@ $utilities: map-merge((
 }
 
 body {
-    @include gradient()
+    @include gradient();
+}
+
+header {
+    border-radius: 50px;
 }
 
 #darkModeToggler {
     font-size: 22px;
 }
 
+.nav-item.active {
+    @include gradient(to right);
+}
+
 #body {
     height: 374px;
-}
-
-.navbar-nav {
-    border: 1px solid rgb(202, 202, 202);
-    border-radius: 20px;
-}
-
-.navbar-nav li{
-    border-right: 1px solid rgb(202, 202, 202);
-}
-
-.navbar-nav li:nth-child(1) a{
-    padding-right: 10px !important;
 }
 
 #img-toggler{
@@ -85,28 +97,12 @@ body {
     height: 385px;
 }
 
-#btn-male, #btn-female {
-    font-size: 40px;
+#btn-male {
+    @include gender-btn($main-blue)   
 }
 
-#btn-male.active {
-    pointer-events: none;
-    color: $main-blue !important;
-}
-
-#btn-female.active {
-    pointer-events: none;
-    color: $main-purple !important;
-}
-
-#btn-male:not(.active):hover {
-    color: $main-blue !important;
-    animation: rotate-btn 1s ease-in-out infinite;
-}
-
-#btn-female:not(.active):hover {
-    color: $main-purple !important;
-    animation: rotate-btn 1s ease-in-out infinite;
+#btn-female {
+    @include gender-btn($main-purple)   
 }
 
 @keyframes rotate-btn {

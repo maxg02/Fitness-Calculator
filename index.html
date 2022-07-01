@@ -1,5 +1,5 @@
-<DOCTYPE html>
-<html>
+<!DOCTYPE html>
+<html class="h-100">
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta charset="utf-8">
@@ -11,30 +11,35 @@
     <script src="https://kit.fontawesome.com/1d0d69ddce.js" crossorigin="anonymous"></script>
 </head>
 
-<body class="p-3">
-    <div class="container-fluid d-flex flex-column h-100">
-        <div class="row mx-0">
-            <header class="container-fluid bg-white py-2 px-4 rounded-pill">
-                <nav class="navbar navbar-expand">
+<body class="p-3 h-100">
+    <div class="container-fluid d-flex flex-column p-0 h-100">
+        <div class="row mx-0 mb-3">
+            <header class="container-fluid bg-white py-2 px-4">
+                <nav class="navbar navbar-expand-sm">
                     <h2 class="ms-2 my-0">Fitness Calculator</h2>
-                    <button class="bg-transparent border-0 ms-2" id="darkModeToggler">
-                        <i class="fa-solid fa-circle-half-stroke"></i>
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#main-navbar" aria-controls="main-navbar" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
                     </button>
-                    <ul class="navbar-nav ms-auto">
-                        <li class="nav-item active">
-                            <a class="nav-link active" href="#" aria-current="page">BFP</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link disabled" href="#">Ideal Weight</a>
-                        </li>
-                        <li class="nav-item border-end-0">
-                            <a class="nav-link disabled" href="#">DCR</a>
-                        </li>
-                    </ul>
+                    <div class="collapse navbar-collapse" id="main-navbar">
+                        <button class="bg-transparent border-0 ms-2" id="darkModeToggler">
+                            <i class="fa-solid fa-circle-half-stroke"></i>
+                        </button>
+                        <ul class="navbar-nav ms-auto border rounded-pill overflow-hidden">
+                            <li class="nav-item active border-end">
+                                <a class="nav-link active" href="#" aria-current="page">BFP</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link disabled" href="#">Ideal Weight</a>
+                            </li>
+                            <li class="nav-item border-start">
+                                <a class="nav-link disabled" href="#">DCR</a>
+                            </li>
+                        </ul>
+                    </div>
                 </nav>   
             </header>
         </div>
-        <div class="container-fluid flex-grow-1 mt-3 bg-white rounded-5 mx-0">
+        <div class="container-fluid flex-grow-1 bg-white rounded-5 mx-0">
             <div class="container-lg px-0">
                 <div class="row py-5 d-flex justify-content-center mx-0">
                     <div class="text-center d-block d-xl-none mb-4 w-75">
@@ -49,7 +54,7 @@
                                 <div id="img-toggler" class="w-100 border-top border-3 position-absolute bg-white align-self-end"></div>
                                 <img src="imgs/bodies/male.png" alt="male" id="body" class="img-fluid mb-2">
                             </div>
-                            <div class="mt-4 d-flex justify-content-between px-2">
+                            <div class="mt-2 d-flex justify-content-between px-2">
                                 <button class="bg-transparent border-0 text-muted active" id="btn-male">
                                     <i class="fa-solid fa-mars"></i>
                                 </button>
