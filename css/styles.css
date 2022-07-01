@@ -7200,14 +7200,6 @@ textarea.form-control-lg {
   min-width: 100vw !important;
 }
 
-.h-0 {
-  height: 0px !important;
-}
-
-.h-10 {
-  height: 10% !important;
-}
-
 .h-25 {
   height: 25% !important;
 }
@@ -7218,10 +7210,6 @@ textarea.form-control-lg {
 
 .h-75 {
   height: 75% !important;
-}
-
-.h-90 {
-  height: 90% !important;
 }
 
 .h-100 {
@@ -10773,7 +10761,6 @@ header {
   height: 0px;
   transition: 0.3s ease-out;
 }
-
 #img-toggler.deployed {
   transition: 0.3s ease-out;
   height: 385px;
