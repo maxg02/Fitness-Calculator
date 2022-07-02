@@ -26,6 +26,8 @@ $font-family-base: 'Source Sans Pro', sans-serif;
 
 $navbar-light-active-color: white;
 
+$input-line-height: 1;
+
 //Utilities
 $utilities: () !default;
 $utilities: map-merge((
@@ -57,10 +59,16 @@ $utilities: map-merge((
     &.active{
         color: $color !important;
         pointer-events: none;
+        svg {
+            filter: drop-shadow(2px 2px 2px rgb(131, 131, 131));
+        }
     }
     &:not(.active):hover{
         color: $color !important;
         animation: rotate-btn 1s ease-in-out infinite;
+        svg {
+            filter: drop-shadow(2px 2px 2px rgb(131, 131, 131));
+        }
     }
 }
 
@@ -96,10 +104,11 @@ header {
 }
 
 #body {
-    height: 374px;
+    height: 348px;
 }
 
 #img-toggler{
+    z-index: 2;
     border-top: {
         color: var(--bs-gray-400);
     }
@@ -108,7 +117,7 @@ header {
 
     &.deployed {
         transition: 0.3s ease-out;
-        height: 385px;
+        height: 358px;
     }
 }
 
@@ -152,4 +161,15 @@ header {
     width: 4em;
     left: -4%;
     top: 60px;
+}
+
+footer {
+    a {
+        font-size: 28px;
+        color: white;
+        &:hover {
+            background-color: white;
+            color: black;
+        }
+    }
 }
