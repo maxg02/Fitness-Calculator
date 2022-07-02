@@ -48,6 +48,8 @@ $utilities: map-merge((
 
 @mixin gradient ($direction: to bottom) {
     background-image: linear-gradient($direction, $main-blue, $main-purple);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
 }
 
 @mixin gender-btn ($color) {

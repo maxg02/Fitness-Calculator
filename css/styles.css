@@ -11616,6 +11616,8 @@ textarea.form-control-lg {
 
 body {
   background-image: linear-gradient(to bottom, #384B9D, #8F0B94);
+  background-repeat: no-repeat;
+  background-attachment: fixed;
 }
 
 header {
@@ -11636,6 +11638,8 @@ header {
 
 .nav-link.active {
   background-image: linear-gradient(to right, #384B9D, #8F0B94);
+  background-repeat: no-repeat;
+  background-attachment: fixed;
 }
 
 #body {
@@ -11691,6 +11695,8 @@ header {
   font-size: 22px;
   font-weight: 600;
   background-image: linear-gradient(to right, #384B9D, #8F0B94);
+  background-repeat: no-repeat;
+  background-attachment: fixed;
 }
 
 .form-label {
