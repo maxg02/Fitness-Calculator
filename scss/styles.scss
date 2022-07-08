@@ -4,9 +4,13 @@ $main-purple: #8F0B94;
 
 //Default overwriting
 
+@import "../node_modules/bootstrap/scss/functions";
+@import "../node_modules/bootstrap/scss/variables";
+@import "../node_modules/bootstrap/scss/mixins";
+
 $grid-breakpoints: (
   xss: 0,
-  xs: 380px,
+  xs: 430px,
   sm: 576px,
   md: 768px,
   lg: 992px,
@@ -25,8 +29,14 @@ $container-max-widths: (
 $font-family-base: 'Source Sans Pro', sans-serif;
 
 $navbar-light-active-color: white;
+$navbar-dark-disabled-color: $gray-600;
+
+$navbar-brand-font-size: 1.8rem;
+$navbar-brand-margin-end: 0.2rem;
 
 $input-line-height: 1;
+
+$form-range-thumb-active-bg: $main-purple;
 
 //Utilities
 $utilities: () !default;
@@ -60,14 +70,19 @@ $utilities: map-merge((
         color: $color !important;
         pointer-events: none;
         svg {
-            filter: drop-shadow(2px 2px 2px rgb(131, 131, 131));
+            filter: drop-shadow(2px 2px 2px rgba(0, 0, 0, 0.541));
         }
     }
-    &:not(.active):hover{
-        color: $color !important;
-        animation: rotate-btn 1s ease-in-out infinite;
-        svg {
-            filter: drop-shadow(2px 2px 2px rgb(131, 131, 131));
+    &:not(.active){
+        &.dark-mode{
+            color: var(--bs-gray-700) !important;
+        }
+        &:hover{
+            color: $color !important;
+            animation: rotate-btn 1s ease-in-out infinite;
+            svg {
+                filter: drop-shadow(2px 2px 2px rgba(0, 0, 0, 0.541));
+            }
         }
     }
 }
@@ -82,12 +97,12 @@ body {
     @include gradient();
 }
 
-header {
+nav {
     border-radius: 35px;
 
     @include media-breakpoint-down(xs) {
         h2 {
-            font-size: 22px;
+            font-size: 22px !important;
         }
         #darkModeToggler {
             font-size: 20px;
@@ -96,7 +111,7 @@ header {
 }
 
 #darkModeToggler {
-    font-size: 22px;
+    font-size: 25px;
 }
 
 .nav-link.active {
@@ -122,7 +137,7 @@ header {
 }
 
 #btn-male {
-    @include gender-btn($main-blue)   
+    @include gender-btn($main-blue);
 }
 
 #btn-female {
@@ -171,5 +186,17 @@ footer {
             background-color: white;
             color: black;
         }
+    }
+}
+
+#calc-title.dark-mode{
+    h1 {
+        color: white !important;
+    }
+    hr {
+        border-top-color: #f1f1f1;
+    }
+    p {
+        color: var(--bs-gray-600) !important;
     }
 }
