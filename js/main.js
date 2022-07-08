@@ -84,8 +84,6 @@ btnCalc.onclick = ()=>{
         })
 }
 
-
-
 //results
 
 const resultsModal = new bootstrap.Modal(document.getElementById('results-modal'))
@@ -159,3 +157,49 @@ function showResults(data){
     
     resultsModal.toggle()
 }
+
+// Dark mode toggler
+
+const darkModeBtn = document.getElementById('darkModeToggler');
+const navbar = document.querySelector('.navbar');
+const calcContainer = document.getElementById('calc-container');
+const calcTitle = document.getElementsByClassName('calc-title');
+const formLabels = document.getElementsByClassName('form-label');
+const formInputs = document.getElementsByClassName('form-control');
+const imgToggler = document.getElementById('img-toggler')
+
+darkModeBtn.onclick = () => {
+    maleBtn.classList.toggle('dark-mode');
+    femaleBtn.classList.toggle('dark-mode');
+
+    navbar.classList.toggle('navbar-dark');
+    navbar.classList.toggle('bg-dark');
+    navbar.classList.toggle('bg-white');
+
+    calcContainer.classList.toggle('bg-dark');
+    calcContainer.classList.toggle('bg-white');
+    
+    for (let title of calcTitle){
+        title.classList.toggle('dark-mode');
+    };
+    
+    for (let label of formLabels){
+        label.classList.toggle('text-white');
+    };
+    
+    for (let input of formInputs){
+        input.classList.toggle('bg-dark');
+        input.classList.toggle('text-white');
+    };
+
+    darkModeBtn.classList.toggle('text-white');
+    for (let icon of darkModeBtn.children){
+        icon.classList.toggle('d-none')
+    }
+
+    imgToggler.classList.toggle('bg-dark');
+    imgToggler.classList.toggle('bg-white');
+
+    
+}
+
