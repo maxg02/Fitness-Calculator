@@ -1,7 +1,7 @@
 // Weight slider
 
 const weightIndicator = document.getElementById('weight-indicator')
-const weightSlider = document.getElementById('weight-input')
+const weightSlider = document.getElementById('weight-range-input')
 
 weightIndicator.style.left = (weightSlider.value-45)*0.808333+'%'
 weightIndicator.textContent = weightSlider.value + 'kg'
@@ -51,12 +51,25 @@ femaleBtn.onclick = ()=>{
 const btnCalc = document.getElementById('btn-calc')
 
 btnCalc.onclick = ()=>{
+
+    
     
     let age = document.getElementById('age-input').value
-    if (age === ''){age = -1}
-    else if (age == 0){age = 1}
-        
-    let weight = document.getElementById('weight-input').value
+    if (age === ''){
+        age = -1
+    }
+    else if (age == 0){
+        age = 1
+    }
+    
+    let weight = 0
+    if (window.innerWidth > 768){
+        weight = document.getElementById('weight-range-input').value
+    } 
+    else {
+        weight = document.getElementById('weight-input').value
+    }
+
     let height = document.getElementById('height-input').value
     let neck = document.getElementById('neck-input').value
     let waist = document.getElementById('waist-input').value
@@ -199,7 +212,4 @@ darkModeBtn.onclick = () => {
 
     imgToggler.classList.toggle('bg-dark');
     imgToggler.classList.toggle('bg-white');
-
-    
 }
-
