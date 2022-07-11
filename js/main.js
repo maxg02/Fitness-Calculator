@@ -51,8 +51,6 @@ femaleBtn.onclick = ()=>{
 const btnCalc = document.getElementById('btn-calc')
 
 btnCalc.onclick = ()=>{
-
-    
     
     let age = document.getElementById('age-input').value
     if (age === ''){
@@ -110,8 +108,8 @@ function showErrors(errors){
     
     errors.forEach(error => {
         let errorElement = document.createElement('li')
-        error[0] = error[0].toUpperCase()
-        errorElement.textContent = error
+        let errorContent = error[0].toUpperCase() + error.slice(1)
+        errorElement.textContent = errorContent
         document.querySelector('.modal-body ul').appendChild(errorElement)
     })
 
