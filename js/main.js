@@ -85,7 +85,6 @@ btnCalc.onclick = ()=>{
 
         .then(response => response.json())
         .then(response => {
-            console.log(response)
             if(response.status_code === 422){
                 showErrors(response.errors)
             }
